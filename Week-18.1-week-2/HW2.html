@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник</title>
+    <link rel="shortcut icon"
+        href="https://img-premium.flaticon.com/png/512/2229/2229675.png?token=exp=1633172293~hmac=8610a4af67e07e751a9c9ab2df74e373"
+        type="image/svg">
+    <style>
+        body {
+            max-width: 760px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .fio {
+            margin-top: 5px;
+        }
+
+        input:required:valid,
+        select:required:valid {
+            border-color: rgb(0, 255, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Добро пожаловать в клинику для ухода за кошачьими "Мягкие лапки"</h1>
+    <img src="https://kotopediya.su/wp-content/uploads/2017/10/cat-1-86.jpg" width="534" height="300"
+        alt="пять котят сидят на спинке дивана" />
+    <h2>Пожалуйста, заполните анкету</h2>
+    <form id="formElem">
+        <div>
+            <fieldset>
+                <legend>Ваши контактные данные:</legend>
+                <div class="fio">
+                    <label for="fistname">Имя</label>
+                    <input type="text" id="fistname" placeholder="Имя" maxlength="20" required />*
+                </div>
+                <div class="fio">
+                    <label for="secondname">Отчество</label>
+                    <input type="text" id="secondname" placeholder="Отчество" maxlength="20" required />
+                </div>
+                <div class="fio">
+                    <label for="lastname">Фамилия</label>
+                    <input type="text" id="lastname" placeholder="Фамилия" maxlength="20" required />*
+                </div>
+                <div class="fio">
+                    <label for="animalname">Имя вашего питомца</label>
+                    <input type="text" id="animalname" placeholder="Имя питомца" maxlength="20" required />
+                </div>
+                <div class="fio">
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" id="phone" placeholder="+7-***-***-**-**"
+                        pattern="/^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/" min="9" max="20"
+                        required />*
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="fio">
+            <label for="Пол питомца">Пол питомца:</label>
+            <input type="text" id="sex" placeholder="Пол питомца" maxlength="20" required />*
+        </div>
+
+        <p>Выберите породу:</p>
+        <select required>*
+            <option value="first option">Британская короткошерстная</option>
+            <option value="second option">Бенгальская кошка</option>
+            <option value="therd option">Абиссинская кошка</option>
+            <option value="forth option">Сиамская кошка</option>
+            <option value="fifth option">Норвежский лесной кот</option>
+            <option value="sixth option">Турецкая ангора</option>
+            <option value="seventh option">Сококе, соукок</option>
+        </select>
+
+        <p>Чем питается:</p>
+        <div>
+            Сухой корм <input type="checkbox" />
+        </div>
+        <div>
+            Консервированный корм <input type="checkbox" />
+        </div>
+        <div>
+            Влажный корм <input type="checkbox" />
+        </div>
+        <div>
+            Премиум <input type="checkbox" />
+        </div>
+
+        <p>Ваш комментарий:</p>
+        <div><textarea rows="5" cols="100" maxlength="200"></textarea></div>
+        <p>Фотография питомца:</p>
+        <div>
+            <input type="file" />
+        </div>
+        <p><button type="submit" id="postButton">Сохранить</button></p>
+        <div class="fio">Спасибо, мы свяжемся с вами в ближайшее время!</div>
+
+
+    </form>
+    <script src="./assets/HW2.js">
+
+    </script>
+</body>
+
+</html>
