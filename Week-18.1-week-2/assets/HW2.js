@@ -3,9 +3,6 @@ postButton.onclick = function (e) {
 
     fetch("https://httpbin.org/post", {
             method: 'POST',
-            headers: {
-                'Content-Type': 'form/multipart;charset=utf-8'
-            },
             body: new FormData(formElem)
         })
         .then(response => response.json())
